@@ -1,9 +1,9 @@
-import { openWSJsonRPC2 } from '../src/open';
 import {
     type WSJsonRPC2CloseCallback,
     type WSJsonRPC2RequestCallback,
-    type WSJsonRPC2Notification
-} from '../src/types';
+    type WSJsonRPC2Notification,
+    openWSJsonRPC2
+} from '../src/wsjsonrpc';
 
 // you can close the connection.
 // or keep it open and pass the callbacks outside!

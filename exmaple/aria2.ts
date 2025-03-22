@@ -1,4 +1,4 @@
-import { openAria2WSJsonRPC } from '../src/open';
+import { openWSJsonRPC2 } from '../src/open';
 import {
     type WSJsonRPC2CloseCallback,
     type WSJsonRPC2RequestCallback,
@@ -9,7 +9,7 @@ import {
 // or keep it open and pass the callbacks outside!
 // in case you never call close() or the server never closes the connection,
 // the promise never resolves.
-await openAria2WSJsonRPC(
+await openWSJsonRPC2(
     // endpoint:
     new URL('ws://127.0.0.1:6800/jsonrpc'),
     // on notifications:

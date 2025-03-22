@@ -11,7 +11,7 @@ import {
  * @see http://xmlrpc-epi.sourceforge.net/specs/rfc.fault_codes.php
  * @see https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent/code#value
  */
-export async function openAria2WSJsonRPC<V = any, E = any>(
+export async function openWSJsonRPC2<V = any, E = any>(
     endpoint: URL,
     onNotification: (data: WSJsonRPC2Notification, query: WSJsonRPC2RequestCallback, close: WSJsonRPC2CloseCallback) => void | Promise<void>,
     onOpen: (query: WSJsonRPC2RequestCallback, close: WSJsonRPC2CloseCallback) => void | Promise<void>,
@@ -41,8 +41,8 @@ export async function openAria2WSJsonRPC<V = any, E = any>(
         }
 
         return await new Promise<any>((resolve, reject) => {
-            // just in case the callback get passed outside the context
-            // after being peacefully close()rd,
+            // just in case the callback gets passed outside the context
+            // after being peacefully close()ed,
             // and some poor function tries to send a query!
             if (ws.readyState !== WebSocket.OPEN) {
                 reject({

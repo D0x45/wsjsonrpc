@@ -1,4 +1,6 @@
 {
+  "name": "wsjsonrpc",
+  "main": "src/wsjsonrpc.ts",
   "dependencies": {},
   "devDependencies": {
     "@types/bun": "^1.2.5"
